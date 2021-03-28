@@ -46,3 +46,18 @@ public static void main(String[] args) {
 ```
 
 ## Soultion: 
+
+The above code generates a list of the unique random numbers given the length of the list. The above method can simplified using Set and HashMap like below.
+
+```java
+public static Set<Integer> foo(int length) {
+    Random random = new Random();
+    Set<Integer> list = new LinkedHashSet<>();
+    
+    while(list.size() < length){
+        int r = random.nextInt(10)+1;
+        list.add(r);
+    }
+    return list;
+}
+```
